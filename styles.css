@@ -1,0 +1,95 @@
+:root{
+    --darkBlue: #1F4288;
+    --lightBlue: #CEE0F8;
+    --intenseBlue: #0A64DA;
+    --intermediateBlue: #4E90D8;
+    --brightBlue: #46B7E8
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: locatorLight;
+    src: url('./assets/fonts/Locator-Light.otf');
+}
+
+@font-face{
+    font-family: poppinsBold;
+    src: url('./assets/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: gothamLight;
+    src: url('./assets/fonts/Gotham-Light.otf');
+}
+
+@font-face{
+    font-family: gothamBook;
+    src: url('./assets/fonts/Gotham-Book.otf');
+}
+
+html{
+    font-family: locatorLight;
+}
+
+.header_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    background: url('./assets/1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    width: 20%;
+    min-width: 200px;
+    max-width: 350px;
+    height: auto;
+}
+
+.register_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.register_container h2{
+    font-family: gothamBook;
+    color: var(--darkBlue);
+    font-weight: 300;
+}
+
+.form_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 80%;
+}
+
+label{
+    width: 100%;
+}
+.input{
+    font-family: gothamLight;
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--brightBlue);
+    padding-bottom: 10px;
+}
+
+.input::placeholder{
+    padding-left: 15px;
+    color: var(--intermediateBlue);
+}
