@@ -9,42 +9,134 @@
 </head>
 <body>
     <!-- INICIO SECCION PÁGINA INACTIVA -->
-    <main class="inactive_page"></main>
+    <main class="inactive_page">
+        <section class="title_container">
+            <h1>Podrás acceder a esta página una vez que el streaming haya finalizado!</h1>
+        </section>
+    </main>
     <!-- FIN SECCION PÁGINA INACTIVA -->
 
-    <!-- INICIO SECCION FORMULARIO -->
-    <header class="header_container">
-        <!--<img src="./assets/" alt="">-->
-        <img class="logo" src="./assets/5.png" alt="Logo Nubeqa">
-    </header>
+    <section class="main_page">
+        <!-- INICIO SECCION FORMULARIO REGISTRO -->
+        <header class="header_container">
+            <img class="logo" src="./assets/5.png" alt="Logo Nubeqa">
+        </header>
 
-    <main class="register_container">
-        <h2>Registro</h2>
-        
-        <form action="" class="form_container">
-                <label for="nombre">
-                    <input class="input" type="text" name="userName" id="userName" placeholder="Nombre" required>
+        <main class="register_container">
+            <h2>Registro</h2>
+            
+            <form action="" class="form_container">
+                    <label for="nombre">
+                        <input class="input" type="text" name="userName" id="userName" placeholder="Nombre" required>
+                    </label>
+
+                    <label for="apellido">
+                        <input class="input" type="text" name="userLastName" id="userLastName" placeholder="Apellido" required>
+                    </label>
+
+                    <label for="email">
+                        <input class="input" type="text" name="userEmail" id="userEmail" placeholder="Email" required>
+                    </label>
+
+                    <label for="button" class="button">
+                        <button type="button" class="blue_button" id="blue_button">SIGUIENTE</button>
+                    </label>
+            </form>
+        </main>
+        <!-- FIN SECCION FORMULARIO REGISTRO -->
+
+        <!-- INICIO SECCION FORMULARIO TRIVIA -->
+        <main class="trivia_container">
+            <h2>Trivia</h2>
+
+            <form action="" class="trivia_form__container">
+                <label for="" class="question_container">
+                    <h4>1. ¿La dosis diaria máxima recomendada de darolutamida es?</h4>
+                    <section class="buttons_container">
+                        <input name="question_one" type="radio" id="question_one_answer_one">
+                        <label for="question_one_answer_one" class="large_button" >1.800 mg</label>
+
+                        <input name="question_one" type="radio" id="question_one_answer_two" >
+                        <label for="question_one_answer_two" class="large_button">1.200 mg</label>
+
+                        <input name="question_one" type="radio" id="question_one_answer_three">
+                        <label for="question_one_answer_three" class="large_button">600 mg</label>
+
+                        <input name="question_one" type="radio" id="question_one_answer_four">
+                        <label for="question_one_answer_four" class="large_button">300 mg</label>
+                    </section>
                 </label>
 
-                <label for="apellido">
-                    <input class="input" type="text" name="userLastName" id="userLastName" placeholder="Apellido" required>
+                <label for="" class="question_container">
+                    <h4>2. ¿Los comprimidos recubiertos de darolutamida deben tomarse con agua, con el estómago vacío?</h4>
+                    <section class="buttons_container">
+                        <input name="question_two" type="radio" id="question_two_answer_one">
+                        <label for="question_two_answer_one" class="large_button">Verdadero</label>
+
+                        <input name="question_two" type="radio" id="question_two_answer_two">
+                        <label for="question_two_answer_two" class="large_button">Falso</label>
+                    </section>
                 </label>
 
-                <label for="email">
-                    <input class="input" type="text" name="userEmail" id="userEmail" placeholder="Email" required>
+                <label for="" class="question_container">
+                    <h4>3. En relación al estudio pivotal, ¿cuál de las siguientes afirmaciones considera correcta?</h4>
+                    <section class="buttons_container">
+
+                        <input name="question_three" type="radio" id="question_three_answer_one">
+                        <label for="question_three_answer_one" class="large_button">Darolutamida redujo un 15% el riesgo de muerte vs. placebo.</label>
+
+                        <input name="question_three" type="radio" id="question_three_answer_two">
+                        <label for="question_three_answer_two" class="large_button">Darolutamida redujo un 31% el riesgo de muerte vs. placebo.</label>
+
+                        <input name="question_three" type="radio" id="question_three_answer_three">
+                        <label for="question_three_answer_three" class="large_button">Darolutamida redujo un 40% el riesgo de muerte vs. placebo.</label>
+
+                        <input name="question_three" type="radio" id="question_three_answer_four">
+                        <label for="question_three_answer_four" class="large_button">Darolutamida redujo un 50% el riesgo de muerte vs. placebo.</label>
+
+                    </section>
+                </label>
+
+                <label for="" class="question_container">
+                    <h4>4. ¿Cuál fue el criterio de valoración principal de eficacia del estudio ARAMIS?</h4>
+                    <section class="buttons_container">
+                        <input name="question_four" type="radio" id="question_four_answer_one">
+                        <label for="question_four_answer_one" class="large_button">Sobrevida promedio.</label>
+
+                        <input name="question_four" type="radio" id="question_four_answer_two">
+                        <label for="question_four_answer_two" class="large_button">Sobrevida libre de metástasis.</label>
+
+                        <input name="question_four" type="radio" id="question_four_answer_three">
+                        <label name="question_four" for="question_four_answer_three" class="large_button">Tiempo hasta el inicio de la primera quimioterapia citotóxica para el cáncer de próstata.</label>
+
+                        <input name="question_four" type="radio" id="question_four_answer_four"></button>
+                        <label for="question_four_answer_four" class="large_button">Sobrevida libre de progresión.</label>
+
+                    </section>
+                </label>
+
+                <label for="" class="question_container">
+                    <h4>5. En el estudio ARAMIS... para el parámetro de eficacia principal, la mediana del tiempo transcurrido hasta el evento para Darolutamida y placebo fue ______/______ meses, respectivamente?</h4>
+                    <section class="buttons_container">
+                        <input name="question_five" type="radio" id="question_five_answer_one">
+                        <label for="question_five_answer_one" class="large_button">18,4; 14,8.</label>
+
+                        <input name="question_five" type="radio" id="question_five_answer_two">
+                        <label for="question_five_answer_two" class="large_button">16,8; 14,8.</label>
+
+                        <input name="question_five" type="radio" id="question_five_answer_three">
+                        <label for="question_five_answer_three" class="large_button">40,4; 18,4.</label>
+
+                        <input name="question_five" type="radio" id="question_five_answer_four"></button>
+                        <label for="question_five_answer_four" class="large_button">39,0; 23,1.</label>
+                    </section>
                 </label>
 
                 <label for="button" class="button">
-                    <button type="button" class="next_button" id="next_button">SIGUIENTE</button>
+                    <button type="button" class="blue_button" id="blue_button">ENVIAR</button>
                 </label>
-        </form>
-    </main>
-
-
-
-
-    
-    <main class="trivia_container">
-    </main>
+            </form>
+        </main>
+    </section>
 </body>
 </html>
