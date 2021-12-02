@@ -14,32 +14,32 @@
 
 @font-face{
     font-family: locatorLight;
-    src: url('./assets/fonts/Locator-Light.otf');
+    src: url('../assets/fonts/Locator-Light.otf');
 }
 
 @font-face{
     font-family: poppinsBold;
-    src: url('./assets/fonts/Poppins-Bold.ttf');
+    src: url('../assets/fonts/Poppins-Bold.ttf');
 }
 
 @font-face {
     font-family: gothamLight;
-    src: url('./assets/fonts/Gotham-Light.otf');
+    src: url('../assets/fonts/Gotham-Light.otf');
 }
 
 @font-face{
     font-family: gothamBook;
-    src: url('./assets/fonts/Gotham-Book.otf');
+    src: url('../assets/fonts/Gotham-Book.otf');
 }
 
 @font-face{
     font-family: gothamBold;
-    src: url('./assets/fonts/Gotham-Bold.otf');
+    src: url('../assets/fonts/Gotham-Bold.otf');
 }
 
 @font-face{
     font-family: gothamBlack;
-    src: url('./assets/fonts/Gotham-Black.otf');
+    src: url('../assets/fonts/Gotham-Black.otf');
 }
 
 html{
@@ -54,7 +54,7 @@ html{
     align-items: center;
     height: 115px;
     width: 100%;
-    background: url('./assets/1.jpg');
+    background: url('../assets/1.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -70,7 +70,7 @@ html{
 .register_container, .trivia_container{
     width: 100%;
     height: auto;
-    background: url('./assets/3.jpg');
+    background: url('../assets/3.jpg');
     background-size: 100%;
     display: flex;
     flex-direction: column;
@@ -83,6 +83,12 @@ html{
     color: var(--darkBlue);
     font-weight: 300;
     font-size: 3rem;
+}
+
+.error__message{
+    color: red;
+    position: relative;
+    top: 1px;
 }
 
 .inactive_page{
