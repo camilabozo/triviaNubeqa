@@ -21,14 +21,14 @@ class Question
         this.userAnswer = answer;
     }
 
-    hasNeverBeenAnswered()
+    wasPreviouslyAnswered()
     {
-        return this.userAnswer == null;
+        return this.userAnswer != null;
     }
 
     wasAnsweredCorrectly()
     {
-        return this.userAnswer.isCorrect()
+        return this.userAnswer.isCorrect
     }
 
     changeAnswersStyle()

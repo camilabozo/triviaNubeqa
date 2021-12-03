@@ -11,7 +11,7 @@
     <main class="container">
         <section class="title__container">
             <h1>¡UPS!</h1>
-            <h4>RESPONDISTE 3/5 RESPUESTAS CORRECTAS</h4>
+            <h4>RESPONDISTE <?php echo $_GET['correctAnswers'] ?>/5 RESPUESTAS CORRECTAS</h4>
         </section>
 
         <section class="mid_title__container">

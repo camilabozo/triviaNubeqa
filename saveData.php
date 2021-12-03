@@ -1,22 +1,28 @@
 <?php
-    if(!isset($_POST["userName"]) || !isset($_POST["userEmail"]) || !isset($_POST["correct_answers"]) || !isset($_POST["employed_time"]) || !isset($_POST["end_time"])){
+    if(!isset($_POST["userName"]) || !isset($_POST["userLastName"]) || !isset($_POST["userEmail"]) || !isset($_POST["correctAnswers"])){
         header('Location: index.php');
     }else{
         $name = $_POST["userName"];
+        $lastName = $_POST["userLastName"];
         $email = $_POST["userEmail"];
-        $correct_answers = $_POST["correct_answers"];
-        $employed_time = $_POST["employed_time"];
-        $end_time = $_POST["end_time"];
-        $archivo = fopen("data.txt", "a+");
+        $correctAnswers = $_POST["correctAnswers"];
+        $today = getDate();
+        $currentTime = $today['hours'].":".$today['minutes'].":".$today['seconds'];
+
+        $file = fopen("data.txt", "a+");
         
-        if($archivo == false){
+        if($file == false){
             echo "Error al crear el archivo";
         }else{
-            fwrite($archivo, $name."||".$email."||".$correct_answers."||".$employed_time."||".$end_time."**\r\n");
-            fflush($archivo);
+            fwrite($file, $name."||".$lastName."||".$email."||".$correctAnswers."||".$currentTime."**\r\n");
+            fflush($file);
         }
     
-        fclose($archivo);
-        header("Location: result.php?correctAnswers=".$correct_answers);
+        fclose($file);
+        if($correctAnswers == 5){
+            header("Location: win.php");
+        }else{
+            header("Location: lose.php?correctAnswers=".$correctAnswers);
+        }
     }
 ?>

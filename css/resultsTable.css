@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: locatorRegular;
+    src: url('../assets/fonts/locator-regular.otf');
+}
+@font-face {
+    font-family: locatorMedium;
+    src: url('../assets/fonts/locator-medium.otf');
+}
+@font-face {
+    font-family: locatorLight;
+    src: url('../assets/fonts/locator-light.otf');
+}
+@font-face {
+    font-family: locatorBlack;
+    src: url('../assets/fonts/locator-black.otf');
+}
+html{
+    font-family: locatorRegular;
+    font-size: 62.5%;
+    color: black;
+}
+
+body{
+    background-color: #393737;
+}
+
+.header__container{
+    width: 100%;
+    height: auto;
+}
+
+.logo__container{
+    margin: 40px 200px 15px 200px;
+    margin-top: 40px;
+    margin-right: 200px;
+    margin-left: 200px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo, .microbiome, .dermlive, .dermlivelaroche{
+    width: 150px;
+    height: 40px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+.main__container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.title__container{
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+}
+h2{
+    color: white;
+
+    text-align: center;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+ td{
+     margin: 0;
+ }
+
+
+tr, td{
+    font-size: 1.6rem;
+    padding: 10px;
+    text-align: center;
+}
+
+.odd__row{
+    background-color: rgb(170, 170, 170);
+    color: black;
+}
+
+.pair__row{
+    /* background-color: white; */
+    color: white;
+}
+
+th{
+    /* border-radius: 5px; */
+    color: white;
+    border: none;
+    background-color: #46B7E8;
+    font-size: 2rem;
+    padding: 10px;
+}
+
+.table__container{
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}

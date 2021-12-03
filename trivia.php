@@ -1,3 +1,12 @@
+<?php
+    if(!isset($_GET['name']) || !isset($_GET['lastname']) || !isset($_GET['email'])){
+        header('Location: index.php');
+    }else{
+        $userName = $_GET['name'];
+        $userLastName = $_GET['lastname'];
+        $userEmail = $_GET['email']; 
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,14 +111,20 @@
                 </label>
 
                 <label for="button" class="button">
-                    <button type="button" class="blue_button" id="finishButton">ENVIAR</button>
+                    <button type="button" class="blue_button" id="finishButton" disabled>ENVIAR</button>
                 </label>
             </form>
         </main>
     </section>
-    <script src="js/entities/Trivia.js"></script>
-    <script src="js/entities/Question.js"></script>
-    <script src="js/entities/Answer.js"></script>
+    <?php 
+        echo "<script>sessionStorage.setItem('userName', '".$userName."')</script>";
+        echo "<script>sessionStorage.setItem('userLastName', '".$userLastName."')</script>";
+        echo "<script>sessionStorage.setItem('userEmail', '".$userEmail."')</script>";
+    ?>
+    <script src="js/classes/User.js"></script>
+    <script src="js/classes/Trivia.js"></script>
+    <script src="js/classes/Question.js"></script>
+    <script src="js/classes/Answer.js"></script>
     <script src="js/playTrivia.js"></script>
 </body>
 </html>

@@ -1,9 +1,3 @@
-
-
-var userName = sessionStorage.getItem('userName');
-var userLastName = sessionStorage.getItem('userLastName');
-var userEmail = sessionStorage.getItem('userEmail');
-
 var questionOneAnswerOne   = document.getElementById('question_one_answer_one');
 var questionOneAnswerTwo   = document.getElementById('question_one_answer_two');
 var questionOneAnswerThree = document.getElementById('question_one_answer_three');
@@ -91,7 +85,11 @@ questions['question_three'] = question3;
 questions['question_four'] = question4;
 questions['question_five'] = question5;
 
-const trivia = new Trivia(questions);
+const user = new User(sessionStorage.getItem('userName'), 
+                      sessionStorage.getItem('userLastName'), 
+                      sessionStorage.getItem('userEmail'));
+
+const trivia = new Trivia(user, questions);
 
 questionOneAnswerOne.addEventListener('click', answerQuestion);
 questionOneAnswerTwo.addEventListener('click', answerQuestion);
@@ -118,14 +116,14 @@ questionFiveAnswerFour.addEventListener('click', answerQuestion);
 
 function answerQuestion(event){
     let answeredQuestion = trivia.questions[event.target.name];
-    if (answeredQuestion.hasNeverBeenAnswered()) {
+    if (!answeredQuestion.wasPreviouslyAnswered()) {
         trivia.remainingQuestions--;
     }
 
     answeredQuestion.setUserAnswer(answeredQuestion.answers[event.target.id]);
     answeredQuestion.changeAnswersStyle();
+
     if (trivia.remainingQuestions == 0) {
         trivia.enableFinishButton();
     }
-    
 }
