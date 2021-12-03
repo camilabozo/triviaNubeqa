@@ -18,21 +18,21 @@
         <main class="trivia_container">
             <h2>Trivia</h2>
 
-            <form action="guardarResultado.php" class="trivia_form__container" method="POST">
+            <form action="saveData.php" class="trivia_form__container" id="triviaForm" method="POST">
                 <label for="" class="question_container">
                     <h4>1. ¿La dosis diaria máxima recomendada de darolutamida es?</h4>
                     <section class="buttons_container">
                         <input name="question_one" type="radio" id="question_one_answer_one">
-                        <label for="question_one_answer_one" class="large_button" >1.800 mg</label>
+                        <label for="question_one_answer_one" class="large_button" name="question_one_answer_one">1.800 mg</label>
 
-                        <input name="question_one" type="radio" id="question_one_answer_two" >
-                        <label for="question_one_answer_two" class="large_button">1.200 mg</label>
+                        <input name="question_one" type="radio" id="question_one_answer_two">
+                        <label for="question_one_answer_two" class="large_button" name="question_one_answer_two">1.200 mg</label>
 
                         <input name="question_one" type="radio" id="question_one_answer_three">
-                        <label for="question_one_answer_three" class="large_button">600 mg</label>
+                        <label for="question_one_answer_three" class="large_button" name="question_one_answer_three">600 mg</label>
 
                         <input name="question_one" type="radio" id="question_one_answer_four">
-                        <label for="question_one_answer_four" class="large_button">300 mg</label>
+                        <label for="question_one_answer_four" class="large_button" name="question_one_answer_four">300 mg</label>
                     </section>
                 </label>
 
@@ -102,10 +102,14 @@
                 </label>
 
                 <label for="button" class="button">
-                    <button type="button" class="blue_button" id="blue_button">ENVIAR</button>
+                    <button type="button" class="blue_button" id="finishButton">ENVIAR</button>
                 </label>
             </form>
         </main>
     </section>
+    <script src="js/entities/Trivia.js"></script>
+    <script src="js/entities/Question.js"></script>
+    <script src="js/entities/Answer.js"></script>
+    <script src="js/playTrivia.js"></script>
 </body>
 </html>
