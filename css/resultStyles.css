@@ -10,39 +10,39 @@ html{
 
 @font-face{
     font-family: locatorLight;
-    src: url('./assets/fonts/Locator-Light.otf');
+    src: url('../assets/fonts/Locator-Light.otf');
 }
 
 @font-face{
     font-family: poppinsLight;
-    src: url('./assets/fonts/Poppins-Light.ttf');
+    src: url('../assets/fonts/Poppins-Light.ttf');
 }
 
 @font-face {
     font-family: gothamLight;
-    src: url('./assets/fonts/Gotham-Light.otf');
+    src: url('../assets/fonts/Gotham-Light.otf');
 }
 
 @font-face{
     font-family: gothamBook;
-    src: url('./assets/fonts/Gotham-Book.otf');
+    src: url('../assets/fonts/Gotham-Book.otf');
 }
 
 @font-face{
     font-family: gothamBold;
-    src: url('./assets/fonts/Gotham-Bold.otf');
+    src: url('../assets/fonts/Gotham-Bold.otf');
 }
 
 @font-face{
     font-family: gothamBlack;
-    src: url('./assets/fonts/Gotham-Black.otf');
+    src: url('../assets/fonts/Gotham-Black.otf');
 }
 
 .container{
     width: 100%;
-    height: auto;
+    /* height: auto; */
     min-height: 500px;
-    background: url('./assets/4.jpg');
+    background: url('../assets/4.jpg');
     /* background-size: 100% 100vh; */
 }
 .title__container, .mid_title__container, .last_title__container{
@@ -81,8 +81,14 @@ html{
 }
 
 .last_title__container h6{
+    padding: 0 0 50px 0;
     text-align: center;
     width: 50%;
     font-size: 1rem;
 }
 
+@media (min-width: 400px){
+    .container{
+        height: 100vh;
+    }
+}
