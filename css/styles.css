@@ -155,15 +155,9 @@ label.button{
     margin-top: 30px;
     border-radius: 50px;
     border: none;
-    background-color: var(--lightBlue);
+    background-color: #F3F4F4;
     font-family: gothamBlack;
-    color: var(--intenseBlue);
-}
-
-.blue_button:hover{
-    color: white;
-    background-color: var(--intermediateBlue);
-    cursor: pointer;
+    color: #BEC0C2;
 }
 
 .trivia_form__container{
