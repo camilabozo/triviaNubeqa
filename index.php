@@ -48,7 +48,7 @@
                 </label>
 
                 <label for="button" class="button">
-                    <button type="button" class="blue_button" id="start__button">SIGUIENTE</button>
+                    <button type="button" class="start_button" id="start__button">SIGUIENTE</button>
                 </label>
             </form>
         </main>

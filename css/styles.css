@@ -160,6 +160,19 @@ label.button{
     color: #BEC0C2;
 }
 
+.start_button{
+    width: 130px;
+    height: 35px;
+    margin-top: 30px;
+    border-radius: 50px;
+    border: none;
+    font-family: gothamBlack;
+    background-color: var(--lightBlue);
+    color: var(--intenseBlue);
+}
+
+
+
 .trivia_form__container{
     display: flex;
     flex-direction: column;

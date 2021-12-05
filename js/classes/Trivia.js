@@ -31,29 +31,24 @@ class Trivia
         }
         finishButton.style.backgroundColor = "var(--lightBlue)";
         finishButton.style.color = "var(--intenseBlue)";
-        finishButton.style.transform = "scale(1)";
-        finishButton.style.animation = "pulseA 2s infinite";
         finishButton.style.cursor = "pointer";
         finishButton.addEventListener('click', finishFunction);
         finishButton.disabled = false;
-        document.styleSheets[0].insertRule('.blue_button:hover { background-color: var(--intermediateBlue); color: white; }', 23);
-        // document.styleSheets[0].cssRules[0].style.backgroundColor= 'red';
-        console.log(document.styleSheets[0]);
+        
+        finishButton.onmouseover = function() 
+        {
+            this.style.backgroundColor = "var(--intermediateBlue)";
+            this.style.color = "white";
+            this.style.cursor = "pointer";
+        }
+
+        finishButton.onmouseleave = function()
+        {
+            this.style.backgroundColor = "var(--lightBlue)";
+            this.style.color = "var(--intenseBlue)";
+        }
         
     }
-
-    // changeButtonHoverStyle()
-    // {
-    //     var css = '.blue_button:hover { background-color: var(--intermediateBlue); color: white; }';
-    //     var style = document.createElement('style');
-    //     style.type = 'text/css';
-    //     if (style.styleSheet) {
-    //         style.styleSheet.cssText = css;
-    //     } else {
-    //         style.appendChild(document.createTextNode(css));
-    //     }
-    //     document.getElementsByTagName('head')[0].appendChild(style);
-    // }
 
     finish()
     {
