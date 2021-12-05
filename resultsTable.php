@@ -9,22 +9,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/resultsTable.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Resultados TRIVIA</title>
 </head>
 <body>
-    <header class="header__container">
-        <section class="logo__container">
-            <!-- <img class="microbiome" src="./assets/img/title3.png" alt="Microbiome Science">
-            <img class="dermlive" src="./assets/img/title2.png" alt="Dermlive Microbioma">
-            <img class="logo" src="./assets/img/title1.png" alt="LaRoche-Posay">
-            <img class="dermlivelaroche" src="./assets/img/title4.png" alt="Dermlive LaRoche-Posay"> -->
-        </section>
+
+    <header class="header_container">
+        <img class="logo" src="./assets/5.png" alt="Logo Nubeqa">
     </header>
-    <section class="container">
+
+    <main class="container">
         <section class="main__container">
             <section class="title__container">
                 <h1>RESULTADOS DE LA TRIVIA</h1>
-                <h2>Cantidad de participantes: <?php echo count($competitorsArray); ?></h2>
+                <br>
+                <h2>Cantidad total de participantes: <?php echo count($competitorsArray); ?></h2>
+                <br>
+                <h2>A continuación, se muestran los 50 ganadores que contestaron 5/5 preguntas correctamente. Además, se muestran 10 ganadores de backup.</h2>
+                <br>
             </section>
             <section class="table__container">
                 <table>
@@ -33,29 +35,37 @@
                         <th>Apellido</th>
                         <th>Nombre</th>
                         <th>Email</th>
-                        <th>Respuestas correctas</th>
                         <th>Hora de finalización</th>
+                        <th>Ganador</th>
                     </tr>
                     <?php
-                        foreach ($competitorsArray as $key => $c) {
-                            if($key%2 == 0){
-                                $pairOrOdd = "pair__row";
-                            }else{
-                                $pairOrOdd = "odd__row";
+
+                        $rowColorClass = "winner__row";
+                        $winnerType = "";
+                        foreach ($competitorsWith5CorrectAnswers as $id => $competitor) 
+                        {
+                            if ($id < 60) 
+                            {
+                                if ($id <= 49) {
+                                    $winnerType = "Ganador";
+                                }elseif ($id >= 49) {
+                                    $winnerType = "Ganador Backup";
+                                    $rowColorClass = "backup_winner__row";
+                                }
+                                echo "<tr class='".$rowColorClass."'>";
+                                echo "<td>".++$id."</td>";
+                                echo "<td>".$competitor->getLastName()."</td>";
+                                echo "<td>".$competitor->getName()."</td>";
+                                echo "<td>".$competitor->getEmail()."</td>";
+                                echo "<td>".$competitor->getEndTime()."hs</td>";
+                                echo "<td>".$winnerType."</td>";
+                                echo "</tr>";
                             }
-                            echo "<tr class='".$pairOrOdd."'>";
-                            echo "<td>".++$key."</td>";
-                            echo "<td>".$c->getLastName()."</td>";
-                            echo "<td>".$c->getName()."</td>";
-                            echo "<td>".$c->getEmail()."</td>";
-                            echo "<td>".$c->getCorrectAnswers()."/5</td>";
-                            echo "<td>".$c->getEndTime()."hs</td>";
-                            echo "</tr>";
                         }
                     ?>
                 </table>
             </section>
         </section>
-    </section>
+    </main>
 </body>
 </html>

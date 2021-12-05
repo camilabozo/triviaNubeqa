@@ -89,30 +89,40 @@ table{
      margin: 0;
  }
 
-
 tr, td{
     font-size: 1.6rem;
     padding: 10px;
     text-align: center;
 }
 
-.odd__row{
-    background-color: rgb(170, 170, 170);
+/* .odd__row{
+    background-color: rgb(23, 93, 162);
+    color: white;
+} */
+
+/* .pair__row{
+    color: white;
+} */
+
+.winner__row{
+    background-color: rgb(23, 93, 162);
+    color: white;
+}
+
+.backup_winner__row{
+    background-color: #CEE0F8;
     color: black;
 }
 
-.pair__row{
-    /* background-color: white; */
-    color: white;
-}
-
 th{
-    /* border-radius: 5px; */
     color: white;
     border: none;
-    background-color: #46B7E8;
+    background-color: rgb(23, 93, 162);
     font-size: 2rem;
     padding: 10px;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+
 }
 
 .table__container{
