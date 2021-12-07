@@ -171,7 +171,11 @@ label.button{
     color: var(--intenseBlue);
 }
 
-
+.start_button:hover{
+    background-color: var(--intenseBlue);
+    color: white;
+    cursor: pointer;
+}
 
 .trivia_form__container{
     display: flex;
